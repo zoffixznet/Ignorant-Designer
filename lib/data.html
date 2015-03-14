@@ -1,0 +1,48 @@
+package Fake;
+use utf8;
+
+1;
+
+__DATA__
+
+@@ admin/index.html.ep
+% layout 'default';
+
+<h2>Admin</h2>
+
+@@ login.html.ep
+% layout 'default';
+
+<h2>Recent Blog Posts</h2>
+
+@@ about.html.ep
+% layout 'default';
+
+<h2>About</h2>
+
+@@ contact.html.ep
+% layout 'default';
+
+<h2>Contact</h2>
+
+
+@@ layouts/default.html.ep
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%= title %> Ignorant Designer</title>
+</head>
+<body>
+    <h1>Ignorant Designer — All That Is Wrong With Things</h1>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <%= content %>
+</body>
