@@ -10,6 +10,21 @@ __DATA__
 
 <h2>Recent Blog Posts</h2>
 
+<ul>
+% for my $post ( @$posts ) {
+    <li><a href="/blog/<%= $post->{url} %>"
+        ><%= $post->{date} %> / <%= $post->{title}%></a
+    ></li>
+% }
+</ul>
+
+@@ blog.html.ep
+% layout 'default';
+
+<h2><%= $blog_title %></h2>
+
+<%== $blog_body %>
+
 @@ about.html.ep
 % layout 'default';
 
@@ -19,6 +34,16 @@ __DATA__
 % layout 'default';
 
 <h2>Contact</h2>
+
+@@ admin/index.html.ep
+% layout 'default';
+
+@@ 404.html.ep
+% layout 'default';
+
+<h2>404 — Page Not Found</h2>
+
+<p>The page you requested was moved or deleted.</p>
 
 @@ admin/index.html.ep
 % layout 'default';

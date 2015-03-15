@@ -3,6 +3,7 @@
 use Mojolicious::Lite;
 use lib qw{lib};
 use IgnorantDesigner::Model::Users;
+use IgnorantDesigner::Model::Posts;
 plugin 'Config';
 
 require 'lib/data.html';
@@ -21,14 +22,36 @@ helper users => sub {
     return $users;
 };
 
+helper posts => sub {
+    my $c = shift;
+    state $posts = IgnorantDesigner::Model::Posts->new;
+};
+
+
 #### ROUTES
+
+get $_ for qw(/about /contact /404);
 
 get '/' => sub {
     my $c = shift;
 
+    $c->stash( posts => $c->posts->brief_list );
+
 } => 'index';
 
-get $_ for qw(/about /contact);
+get '/blog/*post' => sub {
+    my $c = shift;
+
+    my ( $title, $date, $body ) = $c->posts->post( $c->param('post') );
+    $title // $c->redirect_to('/404');
+
+    $c->stash(
+        blog_title  => $title,
+        blog_date   => $date,
+        blog_body   => $body,
+    );
+
+} => 'blog';
 
 get '/login' => sub {
     my $c = shift;
