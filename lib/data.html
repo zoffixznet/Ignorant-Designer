@@ -5,15 +5,12 @@ use utf8;
 
 __DATA__
 
-@@ admin/index.html.ep
-% layout 'default';
-
-<h2>Admin</h2>
-
-@@ login.html.ep
+@@ index.html.ep
 % layout 'default';
 
 <h2>Recent Blog Posts</h2>
+
+<p><%= $pass %></p>
 
 @@ about.html.ep
 % layout 'default';
@@ -25,6 +22,13 @@ __DATA__
 
 <h2>Contact</h2>
 
+@@ admin/index.html.ep
+% layout 'default';
+
+<h2>Admin</h2>
+
+@@ login.html.ep
+% layout 'default';
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>
