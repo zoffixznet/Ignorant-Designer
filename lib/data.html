@@ -10,8 +10,6 @@ __DATA__
 
 <h2>Recent Blog Posts</h2>
 
-<p><%= $pass %></p>
-
 @@ about.html.ep
 % layout 'default';
 
@@ -29,6 +27,31 @@ __DATA__
 
 @@ login.html.ep
 % layout 'default';
+
+<h2>Login</h2>
+
+<p>Note: the authorized area of this site is currently disabled.</p>
+
+%= form_for '/login' => (method => 'POST') => begin
+    %= csrf_field
+
+    % if (stash 'login_failed') {
+      <p class="dui error message">Authorized area has been disabled on this site</p>
+    % }
+
+
+    <ul>
+        <li>
+            %= label_for user => 'User'
+            %= text_field 'user', id => 'user'
+        </li>
+        <li>
+            %= label_for password => 'Password'
+            %= password_field 'password', id => 'password'
+        </li>
+    </ul>
+    %= submit_button 'Login'
+% end
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>
