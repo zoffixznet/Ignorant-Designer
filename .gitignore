@@ -1,5 +1,5 @@
-static/.sass-cache
-static/main.css.map
+public/.sass-cache/*
+public/main.css.map
 secret.txt
 /blib/
 /.build/
