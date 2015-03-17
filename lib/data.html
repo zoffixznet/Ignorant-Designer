@@ -8,7 +8,7 @@ __DATA__
 @@ index.html.ep
 % layout 'default';
 
-<h2>Recent Blog Posts</h2>
+<h2>Think before you make...</h2>
 
 <ul>
 % for my $post ( @$posts ) {
@@ -23,7 +23,9 @@ __DATA__
 
 <h2><%= $blog_title %></h2>
 
-<%== $blog_body %>
+<article>
+    <%== $blog_body %>
+</article>
 
 @@ about.html.ep
 % layout 'default';
@@ -41,7 +43,7 @@ the control of original product designers, or even my own
 ignorance about the engineering limitations. Regardless...</p>
 
 <p>I hope the wise will look past the arrogance and ignorance of this
-site and make the world a better place.</p>
+site and make the world a better place, or just have a good laugh.</p>
 
 @@ contact.html.ep
 % layout 'default';
@@ -100,11 +102,11 @@ site and make the world a better place.</p>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title><%= title %> Ignorant Designer</title>
     <link rel="stylesheet" type="text/css" href="/main.css" media="screen,tv,projection">
-    <link rel="stylesheet" type="text/css" href="/print.css" media="print">
+    <!-- <link rel="stylesheet" type="text/css" href="/print.css" media="print"> -->
 </head>
 <body>
-    <h1>Ignorant Designer — All That Is Wrong With Things</h1>
 
+    <h1>Ignorant Designer.com — A Blog About Badly Designed Things</h1>
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
@@ -113,5 +115,7 @@ site and make the world a better place.</p>
         </ul>
     </nav>
 
-    <%= content %>
+    <section>
+        <%= content %>
+    </section>
 </body>
