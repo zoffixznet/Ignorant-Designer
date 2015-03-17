@@ -5,6 +5,7 @@ use lib qw{lib};
 use IgnorantDesigner::Model::Users;
 use IgnorantDesigner::Model::Posts;
 plugin 'Config';
+plugin 'AntiSpamMailTo';
 
 require 'lib/data.html';
 push @{ app->renderer->classes }, 'Fake';

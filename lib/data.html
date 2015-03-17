@@ -10,10 +10,12 @@ __DATA__
 
 <h2>Think before you make...</h2>
 
-<ul>
+<div id="home_pic"></div>
+
+<ul id="article_list">
 % for my $post ( @$posts ) {
     <li><a href="/blog/<%= $post->{url} %>"
-        ><%= $post->{date} %> / <%= $post->{title}%></a
+        ><%= $post->{title}%> <small><%= $post->{date} %></small></a
     ></li>
 % }
 </ul>
@@ -32,6 +34,8 @@ __DATA__
 
 <h2>About</h2>
 
+<img src="/content-pics/me.jpg" alt="" id="me_pic">
+
 <p>The primary purpose of this site is for me to vent, bitch,
 and complain about the things I encounter and use. However, a
 nobler part of me hopes others would use the information
@@ -45,12 +49,17 @@ ignorance about the engineering limitations. Regardless...</p>
 <p>I hope the wise will look past the arrogance and ignorance of this
 site and make the world a better place, or just have a good laugh.</p>
 
+<p>Check out my <a href="http://zoffix.com">main site—zoffix.com</a>.</p>
+
 @@ contact.html.ep
 % layout 'default';
 
 <h2>Contact</h2>
 
-<p>You can reach me by </p>
+<p>You can reach me by emailing to
+    <a href="<%== mailto_href 'info@ignorantdesigner.com' %>"
+        ><%== mailto 'info@ignorantdesigner.com' %></a>
+</p>
 
 @@ admin/index.html.ep
 % layout 'default';
@@ -101,6 +110,7 @@ site and make the world a better place, or just have a good laugh.</p>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title><%= title %> Ignorant Designer</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/main.css" media="screen,tv,projection">
     <!-- <link rel="stylesheet" type="text/css" href="/print.css" media="print"> -->
 </head>
@@ -118,4 +128,9 @@ site and make the world a better place, or just have a good laugh.</p>
     <section>
         <%= content %>
     </section>
+
+    <footer>
+        Copyright © 2015 by Zoffix Znet
+        <a href="http://mojolicio.us"><img src="/content-pics/powered-by-mojolicious.png" alt="Powered by Mojolicious"></a>
+    </footer>
 </body>

@@ -4,6 +4,7 @@ $light-bg: #fff;
 $border-color: #B7A997;
 $link-color: #B7A997;
 $text-color: #968369;
+$lightened-text-color: #E4DFD8;
 
 .text_hide {
     overflow: hidden;
@@ -25,7 +26,7 @@ html, body, p, ul, ol, li, form {
 
 
 html {
-    font: .85em "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font: .85em 'Open Sans', 'Trebuchet MS', Arial, Helvetica, sans-serif;
     color: $text-color;
     background: $light-bg;
 }
@@ -35,9 +36,27 @@ h1 {
     left: -99999px;
 }
 
+h2, h3, h4 {
+    font-weight: normal;
+}
+
+h2 {
+    letter-spacing: -1px;
+    font-size: 250%;
+    font-weight: 300;
+}
+
 a {
     color: $link-color;
     text-decoration: none;
+}
+
+p, li {
+    line-height: 1.675em;
+}
+
+p, ul, form {
+    margin: 20px 0px;
 }
 
 a:hover,
@@ -66,14 +85,20 @@ nav {
     }
 
     li:first-child {
-        margin-left: 144px;
+        margin-left: 137px;
     }
 
     a {
         @extend .text_hide;
         outline: 0;
-        width: 35px;
+        width: 42px;
         height: 20px;
+        transition: border-color .65s;
+        border-bottom: 4px solid rgba(0, 0, 0, 0);
+    }
+
+    a:hover {
+        border-color: $text-color;
     }
 
     li + li a {
@@ -85,4 +110,66 @@ nav {
     }
 }
 
+footer,
+section {
+    width: 900px;
+    margin: 0 auto;
+}
 
+section:after {
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+}
+
+footer {
+    font-size: 90%;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: $text-color;
+    border-top: 1px solid $border-color;
+    /*opacity: .4;*/
+
+    a {
+        display: block;
+        padding-top: 20px;
+    }
+}
+
+#me_pic {
+    float: right;
+    margin-left: 20px;
+    border: 1px solid $border-color;
+    padding: 5px;
+}
+
+#article_list {
+    @extend .unstyled_list;
+
+    a {
+        font-size: 200%;
+        display: block;
+        position: relative;
+        padding-right: 6em;
+    }
+
+    small {
+        display: block;
+        text-align: right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 50%;
+    }
+}
+
+#home_pic {
+    margin-top: -20px;
+    width: 902px;
+    height: 520px;
+    background: url(/pics/home-pic.jpg);
+}
