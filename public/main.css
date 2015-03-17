@@ -15,7 +15,8 @@ html, body, p, ul, ol, li, form {
 html {
   font: .85em 'Open Sans', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   color: #968369;
-  background: #fff; }
+  background: #fff;
+  overflow: scroll; }
 
 h1 {
   position: absolute;
@@ -27,7 +28,17 @@ h2, h3, h4 {
 h2 {
   letter-spacing: -1px;
   font-size: 250%;
-  font-weight: 300; }
+  font-weight: 300;
+  margin-bottom: -10px; }
+
+h3 {
+  font-size: 190%;
+  font-weight: 300;
+  margin-bottom: -20px; }
+
+img {
+  border: 1px solid #B7A997;
+  padding: 5px; }
 
 a {
   color: #B7A997;
@@ -92,34 +103,45 @@ footer {
   text-align: center;
   color: #968369;
   border-top: 1px solid #B7A997;
-  /*opacity: .4;*/ }
+  opacity: .4;
+  transition: opacity 1s; }
   footer a {
     display: block;
     padding-top: 20px; }
+  footer img {
+    border: 0; }
+
+footer:hover {
+  opacity: 1; }
 
 #me_pic {
   float: right;
-  margin-left: 20px;
-  border: 1px solid #B7A997;
-  padding: 5px; }
+  margin-left: 20px; }
 
-#article_list a {
-  font-size: 200%;
-  display: block;
-  position: relative;
-  padding-right: 6em; }
-#article_list small {
-  display: block;
-  text-align: right;
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 50%; }
+#article_list {
+  margin-top: 20px; }
+  #article_list a {
+    font-size: 200%;
+    display: block;
+    position: relative;
+    padding-right: 6em;
+    outline: 0; }
+  #article_list small {
+    display: block;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 50%; }
 
 #home_pic {
-  margin-top: -20px;
+  margin-top: 15px;
   width: 902px;
   height: 520px;
   background: url(/pics/home-pic.jpg); }
+
+article img {
+  float: right;
+  margin-left: 20px; }
 
 /*# sourceMappingURL=main.css.map */
