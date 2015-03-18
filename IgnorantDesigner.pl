@@ -7,6 +7,8 @@ use IgnorantDesigner::Model::Posts;
 plugin 'Config';
 plugin 'AntiSpamMailTo';
 
+app->config(hypnotoad => {listen => ['http://*:8080']});
+
 require 'lib/data.html';
 push @{ app->renderer->classes }, 'Fake';
 
