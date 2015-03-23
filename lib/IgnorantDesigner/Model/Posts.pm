@@ -5,6 +5,7 @@ use Moo;
 use Text::Markdown 'markdown';
 use File::Glob qw/bsd_glob/;
 use File::Slurp::Tiny 'read_file';
+use Encode;
 
 sub brief_list {
     my $self = shift;
@@ -36,7 +37,7 @@ sub post {
     return
         unless -e $post;
 
-    my $content = read_file $post;
+    my $content = decode 'utf8', read_file $post;
 
     return (
         $title,
