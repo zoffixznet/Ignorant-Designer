@@ -1,1 +1,2 @@
 *.pm linguist-language=Perl
+*.scss linguist-language=SCSS
