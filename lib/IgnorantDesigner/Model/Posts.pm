@@ -5,6 +5,7 @@ use Moo;
 use Text::Markdown 'markdown';
 use File::Glob qw/bsd_glob/;
 use File::Slurp::Tiny 'read_file';
+use List::UtilsBy qw/sort_by/;
 use Encode;
 
 sub brief_list {
@@ -22,6 +23,8 @@ sub brief_list {
             url     => s/.md$//r,
         };
     }
+
+    @posts = reverse sort_by { $_->{date} } @posts;
 
     return \@posts;
 }
