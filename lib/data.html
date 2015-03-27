@@ -61,48 +61,11 @@ site and make the world a better place, or just have a good laugh.</p>
         ><%== mailto 'info@ignorantdesigner.com' %></a>
 </p>
 
-@@ admin/index.html.ep
-% layout 'default';
-
 @@ 404.html.ep
 % layout 'default';
 
 <h2>404 — Page Not Found</h2>
-
 <p>The page you requested was moved or deleted.</p>
-
-@@ admin/index.html.ep
-% layout 'default';
-
-<h2>Admin</h2>
-
-@@ login.html.ep
-% layout 'default';
-
-<h2>Login</h2>
-
-<p>Note: the authorized area of this site is currently disabled.</p>
-
-%= form_for '/login' => (method => 'POST') => begin
-    %= csrf_field
-
-    % if (stash 'login_failed') {
-      <p class="dui error message">Authorized area has been disabled on this site</p>
-    % }
-
-
-    <ul>
-        <li>
-            %= label_for user => 'User'
-            %= text_field 'user', id => 'user'
-        </li>
-        <li>
-            %= label_for password => 'Password'
-            %= password_field 'password', id => 'password'
-        </li>
-    </ul>
-    %= submit_button 'Login'
-% end
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>
