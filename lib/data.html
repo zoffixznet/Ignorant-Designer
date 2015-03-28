@@ -7,6 +7,10 @@ __DATA__
 
 @@ index.html.ep
 % layout 'default';
+% stash('metas', {
+%   keywords => 'broken bad stupid design suggestions complaints',
+%   description =>  'All about badly designed things',
+% });
 
 <h2>Think before you make...</h2>
 
@@ -31,6 +35,10 @@ __DATA__
 
 @@ about.html.ep
 % layout 'default';
+% stash('metas', {
+%   keywords => 'about IgnorantDesigner.com',
+%   description =>  'What IgnorantDesigner.com is all about',
+% });
 
 <h2>About</h2>
 
@@ -53,6 +61,10 @@ site and make the world a better place, or just have a good laugh.</p>
 
 @@ contact.html.ep
 % layout 'default';
+% stash('metas', {
+%   keywords => 'Contact author IgnorantDesigner.com',
+%   description =>  'Contact author of IgnorantDesigner.com articles',
+% });
 
 <h2>Contact</h2>
 
@@ -75,6 +87,13 @@ site and make the world a better place, or just have a good laugh.</p>
     <title><%= title %> Ignorant Designer</title>
     <meta name="viewport" content="width=device-width, initial-scale=.3">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    <meta name="keywords"
+        content="<%= (stash('metas')||{})->{keywords} %>">
+
+    <meta name="description"
+        content="<%= (stash('metas')||{})->{description} %>">
+
     <link rel="stylesheet" type="text/css" href="/main.css" media="screen,tv,projection">
     <!-- <link rel="stylesheet" type="text/css" href="/print.css" media="print"> -->
 </head>

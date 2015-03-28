@@ -29,12 +29,15 @@ get '/' => sub {
 get '/blog/*post' => sub {
     my $c = shift;
 
-    my ( $title, $date, $body ) = $c->posts->post( $c->param('post') );
+    my ( $title, $date, $metas, $body )
+    = $c->posts->post( $c->param('post') );
+
     $title // $c->redirect_to('/404');
 
     $c->stash(
         blog_title  => $title,
         blog_date   => $date,
+        metas       => $metas,
         blog_body   => $body,
     );
 

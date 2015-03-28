@@ -1,3 +1,5 @@
+% keywords buttons kitchen timer
+% description Kitchen timer buttons made by a moron
 
 ![](/content-pics/blog/Kitchen-Timer-1.jpg) I first bought this timer a year ago, and it's quite decent. What annoys
 me the most about it, though, is its power button.

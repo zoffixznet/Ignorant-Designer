@@ -41,10 +41,13 @@ sub post {
         unless -e $post;
 
     my $content = decode 'utf8', read_file $post;
+    my %metas;
+    $metas{ $1 } = $2 while $content =~ s/^%\s+(\w+)\s+(.+)$//m;
 
     return (
         $title,
         $date,
+        \%metas,
         markdown $content,
     );
 }

@@ -1,3 +1,5 @@
+% keywords mobile google maps design flaw
+% description Mobile Google Maps can't get one job right
 
 I'm a simple person. The only thing I want a map to do is... TELL ME WHERE THE FUCK I AM!!
 
