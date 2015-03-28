@@ -36,6 +36,7 @@ get '/blog/*post' => sub {
 
     $c->stash(
         blog_title  => $title,
+        title       => $title,
         blog_date   => $date,
         metas       => $metas,
         blog_body   => $body,
