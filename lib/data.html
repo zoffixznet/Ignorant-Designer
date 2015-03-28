@@ -98,8 +98,7 @@ site and make the world a better place, or just have a good laugh.</p>
     <meta name="description"
         content="<%= (stash('metas')||{})->{description} %>">
 
-    <link rel="stylesheet" type="text/css" href="/main.css" media="screen,tv,projection">
-    <!-- <link rel="stylesheet" type="text/css" href="/print.css" media="print"> -->
+    %= asset "app.css", {}, media => "screen,tv,projection"
 </head>
 <body>
 
@@ -121,6 +120,5 @@ site and make the world a better place, or just have a good laugh.</p>
         <a href="http://mojolicio.us"><img src="/content-pics/powered-by-mojolicious.png" alt="Powered by Mojolicious"></a>
     </footer>
 
-    <script src="/JS/jquery-2.1.3.js"></script>
-    <script src="/JS/main.js"></script>
+    %= asset "app.js"
 </body>

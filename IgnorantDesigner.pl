@@ -5,6 +5,13 @@ use lib qw{lib};
 use IgnorantDesigner::Model::Posts;
 plugin 'AntiSpamMailTo';
 
+app->mode('production');
+
+plugin 'AssetPack';
+
+app->asset('app.js' => qw{ /JS/jquery-2.1.3.js  /JS/main.js});
+app->asset('app.css' => '/main.scss' );
+
 app->config(hypnotoad => {listen => ['http://*:8080']});
 
 require 'lib/data.html';
