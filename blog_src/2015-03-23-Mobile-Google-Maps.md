@@ -2,14 +2,14 @@
 I'm a simple person. The only thing I want a map to do is... TELL ME WHERE THE FUCK I AM!!
 
 What irks me quite frequently whenever I launch Google Maps™ on my
-Note 4 is that it frequently witholds that information:
+Note 4 is that it usually witholds that information:
 
 <img src="/content-pics/blog/2015-03-18-Mobile-Google-Maps1.png" alt=""
     class="content_pic right">
 
 This is the default view and it's telling me I'm on *Williams* and... *16*
 
-Problem is, I don't know what the fuck *16* us. Now, I can see there's
+Problem is, I don't know what the fuck *16* is. Now, I can see there's
 *Murray St.* a few blocks ahead—no one cares about it. There's
 *Vodden St. E.* North-West, and *Hansen Rd. N.* to the West, and
 *Southlake Blvd.* to the South, but there's no useful information on
