@@ -1,7 +1,7 @@
 % keywords nasal spray protective film for your protection drixoral
 % description Annoying protective film on Drixoral nasal spray
 
-It's pretty annoying to have stuffy nose. You talk funny and you can't
+It's pretty annoying to have a stuffy nose. You talk funny and you can't
 breathe for shit. The idiots who make Drixoral nasal spray decided to
 add insult to the injury by wrapping their bottles in a crappy film
 "for your protection." Thanks, dickheads! I feel protected!
@@ -14,7 +14,7 @@ an attempt at perforating a strip, but it's next to impossible to grab
 it. The perforated strip is just half the problems, though...
 
 I actually opened it at home and had access to a knife. Still, getting
-that fucking film off proved to be difficult. As pics show, the thing
+that fucking film off proved to be difficult. As the pics show, the thing
 is akin to hard, extra-thin plastic that breaks off any time you try
 to pull it. So even after I made a cut with a knife and started to pull
 the fucking thing broke, and I had to repeat the process a few times.
