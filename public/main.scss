@@ -213,17 +213,18 @@ footer:hover {
 
 article img {
     float: right;
-    clear: right;
     margin-left: 20px;
 }
 
 .content_pic.right {
     float: right;
+    clear: right;
     margin-left: 20px;
 }
 
 .content_pic.left {
     float: left;
+    clear: left;
     margin-right: 20px;
     margin-left: 0;
 }
