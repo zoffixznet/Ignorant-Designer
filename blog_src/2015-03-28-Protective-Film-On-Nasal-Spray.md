@@ -11,7 +11,7 @@ it... just out of the store... where you don't have a knife or much
 of any opening tool other than your fingers. The film, however, doesn't
 have any grabable, perforated section on it. There does seem to have been
 an attempt at perforating a strip, but it's next to impossible to grab
-it. But the perforated strip is just half the problems...
+it. The perforated strip is just half the problems, though...
 
 I actually opened it at home and had access to a knife. Still, getting
 that fucking film off proved to be difficult. As pics show, the thing
@@ -20,7 +20,7 @@ to pull it. So even after I made a cut with a knife and started to pull
 the fucking thing broke, and I had to repeat the process a few times.
 
 I'm all for adding protective films, but do you people ever try to
-open your own fucking products? I'm looking at your, maker of Drixoral!
+open your own fucking products? I'm looking at you, maker of Drixoral!
 You'd have to do it just once before you'd go "Hey, that's
 fucking annoying! We need to fix it!" Fix it!
 
