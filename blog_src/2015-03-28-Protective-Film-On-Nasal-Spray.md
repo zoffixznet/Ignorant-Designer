@@ -1,4 +1,4 @@
-% nasal spray protective film for your protection drixoral
+% keywords nasal spray protective film for your protection drixoral
 % description Annoying protective film on Drixoral nasal spray
 
 It's pretty annoying to have stuffy nose. You talk funny and you can't
