@@ -10,7 +10,7 @@ app->mode('production');
 plugin 'AssetPack';
 
 app->asset('app.js' => qw{ /JS/jquery-2.1.3.js  /JS/main.js});
-app->asset('app.css' => '/main.scss' );
+app->asset('app.css' => qw{/main.scss /mobile.scss} );
 
 app->config(hypnotoad => {listen => ['http://*:8080']});
 
