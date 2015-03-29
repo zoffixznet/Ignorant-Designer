@@ -91,14 +91,12 @@ site and make the world a better place, or just have a good laugh.</p>
     <title><%= title %> - Ignorant Designer</title>
     <meta name="viewport" content="width=device-width, initial-scale=.3">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-
     <meta name="keywords"
         content="<%= (stash('metas')||{})->{keywords} %>">
-
     <meta name="description"
         content="<%= (stash('metas')||{})->{description} %>">
-
     %= asset "app.css", {}, media => "screen,tv,projection"
+    <link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
 
