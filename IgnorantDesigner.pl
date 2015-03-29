@@ -51,4 +51,10 @@ get '/blog/*post' => sub {
 
 } => 'blog';
 
+any '/sitemap.xml' => sub {
+    my $c = shift;
+    $c->stash( format => 'xml' );
+    $c->stash( posts => $c->posts->brief_list );
+} => 'sitemap';
+
 app->start;
