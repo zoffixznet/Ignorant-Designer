@@ -4,9 +4,6 @@ use Mojolicious::Lite;
 use lib qw{lib};
 use IgnorantDesigner::Model::Posts;
 plugin 'AntiSpamMailTo';
-
-# app->mode('production');
-
 plugin 'AssetPack';
 
 app->asset('app.js' => qw{
