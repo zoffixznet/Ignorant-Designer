@@ -30,9 +30,27 @@ __DATA__
 
 <h2><%= $blog_title %></h2>
 
+%= include 'blog_nav';
 <article>
     <%== $blog_body %>
 </article>
+%= include 'blog_nav';
+
+@@ blog_nav.html.ep
+<ul class="blog_nav">
+    <% if ( stash('blog_next') ) { %>
+        <li class="next"
+            title="<%= stash('blog_next')->{description} %>"
+            ><a href="/blog/<%= $blog_next->{url} %>"
+            ><%= stash('blog_next')->{title} %></a></li>
+    <% } %>
+    <% if ( stash('blog_prev') ) { %>
+        <li class="prev"
+            title="<%= stash('blog_prev')->{description} %>"
+            ><a href="/blog/<%== stash('blog_prev')->{url} %>"
+                ><%= $blog_prev->{title} %></a></li>
+    <% } %>
+</ul>
 
 @@ about.html.ep
 % layout 'default';

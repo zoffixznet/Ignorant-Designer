@@ -15,4 +15,6 @@ jQuery(function ($) {
             }
         });
     }
+
+    $('.blog_nav li').tooltipsy();
 });

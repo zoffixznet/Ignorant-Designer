@@ -5,6 +5,7 @@ $border-color: #B7A997;
 $lighter-border-color: #F2E7D8;
 $link-color: #B7A997;
 $text-color: #968369;
+$on-dark-text-color: #ddd;
 $lightened-text-color: #E4DFD8;
 
 .text_hide {
@@ -211,9 +212,17 @@ footer:hover {
     background: url(/pics/home-pic.jpg);
 }
 
-article img {
-    float: right;
-    margin-left: 20px;
+article {
+    img {
+        float: right;
+        margin-left: 20px;
+    }
+}
+
+article:after {
+    display: block;
+    content: "";
+    clear: both;
 }
 
 .content_pic.right {
@@ -234,4 +243,43 @@ article img {
     clear: both;
     display: block;
     margin: .5em auto;
+}
+
+.blog_nav {
+    clear: both;
+    list-style: none;
+    overflow: hidden;
+    padding: .5em 0;
+    margin-top: 1em;
+    border: 1px dotted $lighter-border-color;
+    border-left: 0;
+    border-right: 0;
+    font-size: 90%;
+
+    .next {
+        float: right;
+    }
+
+    .next:after {
+        content: "→";
+        padding-left: .5em;
+    }
+
+    .prev {
+        float: left;
+    }
+
+    .prev:before {
+        content: "←";
+        padding-right: .5em;
+    }
+}
+
+.tooltipsy {
+    padding: 1em;
+    max-width: 30em;
+    line-height: 1.5em;
+    color: $on-dark-text-color;
+    background-color: #222;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }

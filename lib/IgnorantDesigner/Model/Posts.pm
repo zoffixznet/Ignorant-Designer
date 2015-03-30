@@ -7,6 +7,7 @@ use File::Glob qw/bsd_glob/;
 use File::Slurp::Tiny 'read_file';
 use List::UtilsBy qw/sort_by/;
 use Encode;
+use experimental 'postderef';
 
 sub brief_list {
     my $self = shift;
@@ -35,12 +36,36 @@ sub post {
     my ( $date, $title ) = $post =~ /(\d{4}-\d{2}-\d{2})-(.+)/;
     $title =~ tr/-/ /;
 
-    $post = 'blog_src/' . $post =~ s/[^\w-]//rg . '.md';
+    my $post_src = 'blog_src/' . $post =~ s/[^\w-]//rg . '.md';
 
-    return
-        unless -e $post;
+    return unless -e $post_src;
 
-    my $content = decode 'utf8', read_file $post;
+    my ( $next, $prev, $found_next );
+    for ( $self->brief_list->@* ) {
+        if ( $_->{url} eq $post ) {
+            $found_next = 1;
+            next;
+        }
+
+        $next = $_ unless $found_next;
+
+        if ( $found_next ) {
+            $prev = $_ ;
+            last;
+        }
+    }
+
+    for ( $next, $prev ) {
+        defined or next;
+        my $post_src = 'blog_src/' .
+            $_->{url} =~ s/[^\w-]//rg . '.md';
+        my $content = decode 'utf8', read_file $post_src;
+        my %metas;
+        $metas{ $1 } = $2 while $content =~ s/^%\s+(\w+)\s+(.+)$//m;
+        $_->{description} = $metas{description};
+    }
+
+    my $content = decode 'utf8', read_file $post_src;
     my %metas;
     $metas{ $1 } = $2 while $content =~ s/^%\s+(\w+)\s+(.+)$//m;
 
@@ -48,7 +73,9 @@ sub post {
         $title,
         $date,
         \%metas,
-        markdown $content,
+        markdown($content),
+        $prev,
+        $next,
     );
 }
 
